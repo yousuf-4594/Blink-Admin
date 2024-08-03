@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Blink Admin | Add New Customer{% endblock title %}
+
+
+{% block content %}
+<form action="{% url "new-customer-page" %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Add</button>
+</form>
+{% endblock content %}

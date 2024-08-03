@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Blink Admin | Add New Food{% endblock title %}
+
+
+{% block content %}
+<form action="{% url "new-food-page" %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Add</button>
+</form>
+{% endblock content %}
